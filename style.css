@@ -1,0 +1,78 @@
+/* Estiliza o spinner (animação) */
+.spinner {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    animation: animate 2s infinite; /* Aplica a animação */
+}
+
+/* Centraliza tudo na tela */
+body {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0;
+    background-color: #f0f0f0; /* Cor de fundo inicial */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Animação do spinner */
+@keyframes animate {
+    0%, 100% {
+        border-radius: 50%; /* Começa e termina como um círculo */
+        transform: rotate(0deg); /* Sem rotação no início */
+        background: rgb(255,149,1); /* Cor laranja */
+    }
+    50% { 
+        border-radius: 0%; /* No meio da animação, vira um quadrado */
+        transform: rotate(180deg); /* Rotação de 180 graus */
+        background: #00ee3b; /* Cor verde */
+    }
+}
+
+/* Oculta o input padrão */
+input {
+    appearance: none;
+    position: absolute; /* Remove da área visível */
+}
+
+/* Estiliza a área do switch (botão de alternância) */
+.switch span {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #ddd; /* Cor do switch quando desligado */
+    border-radius: 20px; /* Arredonda as bordas */
+    transition: 0.3s; /* Suaviza a transição de cores */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estiliza o botão dentro do switch */
+span::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff; /* Cor do botão interno */
+    border-radius: 50%; /* Deixa redondo */
+    margin: 2px;
+    transition: 0.3s; /* Animação suave */
+}
+
+/* Quando o switch está ativado */
+input:checked + span {
+    background: #4ecdc4; /* Muda a cor do switch */
+}
+
+/* Move o botão interno para a direita ao ativar */
+input:checked + span::before {
+    transform: translateX(20px);
+}
+
+/* Muda o fundo da página ao ativar o switch */
+body:has(input:checked) {
+    background: #212121; /* Fica um fundo escuro */
+}
