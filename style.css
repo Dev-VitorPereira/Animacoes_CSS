@@ -6,7 +6,6 @@
     animation: animate 2s infinite; /* Aplica a animação */
 }
 
-/* Centraliza tudo na tela */
 body {
     display: flex;
     flex-direction: column; /* Coloca os elementos um abaixo do outro */
@@ -14,7 +13,7 @@ body {
     align-items: center; /* Centraliza horizontalmente */
     height: 100vh; /* Ocupa toda a altura da tela */
     margin: 0;
-    background-color: #f0f0f0; /* Cor de fundo inicial */
+    background-color: #f0f0f0; 
     gap: 20px; /* Espaçamento entre os elementos */
 }
 
