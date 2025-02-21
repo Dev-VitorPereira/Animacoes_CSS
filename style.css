@@ -23,12 +23,12 @@ body {
     0%, 100% {
         border-radius: 50%; /* Começa e termina como um círculo */
         transform: rotate(0deg); /* Sem rotação no início */
-        background: rgb(255,149,1); /* Cor laranja */
+        background: rgb(255,149,1); 
     }
     50% { 
         border-radius: 0%; /* No meio da animação, vira um quadrado */
         transform: rotate(180deg); /* Rotação de 180 graus */
-        background: #00ee3b; /* Cor verde */
+        background: #00ee3b; 
     }
 }
 
